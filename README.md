@@ -1,0 +1,2 @@
+angular-color-picker
+====================
