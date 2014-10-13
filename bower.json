@@ -1,0 +1,25 @@
+{
+  "name": "angular-color-picker",
+  "main": "angular-color-picker.js",
+  "version": "0.0.0",
+  "homepage": "https://github.com/myplanetdigital/angular-color-picker",
+  "authors": [
+    "Ates Goral <ates.g@myplanetdigital.com>"
+  ],
+  "moduleType": [
+    "amd",
+    "globals"
+  ],
+  "keywords": [
+    "angular",
+    "color"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
