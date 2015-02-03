@@ -8,6 +8,22 @@
     <link rel="stylesheet" href="theme.css" />
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/github.min.css" />
     <link rel="stylesheet" href="lib/angular-color-picker.css" />
+    <style>
+    .showcase-example {
+        padding-bottom: 28px;
+    }
+    .showcase-example .angular-color-picker {
+        margin: 8px;
+        border-color: transparent;
+    }
+    .showcase-example input {
+        font-family: TradeGothic, sans-serif;
+        font-size: 1em;
+        margin-left: 28px;
+        color: #333;
+        width: 6em;
+    }
+    </style>
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.9/angular.js"></script>
     <script src="lib/angular-color-picker.js"></script>
@@ -22,14 +38,15 @@
         <div class="content-wrap">
             <a href="http://myplanet.io" class="logo" title="Myplanet">Myplanet</a>
             <h1><a href="/">angular-color-picker</a></h1>
-            <h2>Subtitle</h2>
+            <h2>Lightweight Color Picker for Angular</h2>
         </div>
     </header>
     <nav>
         <div class="content-wrap">
             <ul>
-                <li><a href="#">Download <strong>ZIP</strong></a></li>
-                <li><a href="#">Download <strong>TAR</strong></a></li>
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#download">Download <strong>v1.0.0</strong></a></li>
+                <li><a href="#usage">Usage</a></li>
                 <li><a href="https://github.com/myplanetdigital/angular-color-picker">View on <strong>GitHub</strong></a></li>
             </ul>
         </div>
@@ -38,137 +55,102 @@
         <section class="showcase">
             <div class="content-wrap">
                 <div class="showcase-example">
-                    <input type="text" ng-model="color">
                     <color-picker ng-model="color">
                     </color-picker>
+
+                    <input type="text"
+                           ng-model="color"
+                           ng-init="color = '#f05a28'">
+                    <span ng-style="{ color: color }">
+                        &block;
+                    </span>
                 </div>
                 <div class="showcase-content">
-                    <h3>Showcase</h3>
+                    <h3>Live Demo</h3>
 
-                    <p>In case we need a bolder, larger section to showcase an example or the working code, for users to interact with.</p>
+                    <p>Click and drag to pick colors or type RGB color values in the input element.</p>
 
-                    <h4>Showcase Code Block</h4>
+                    <h4>Demo Source</h4>
 
                     <pre><code class="lang-html"><!--
--->&lt;input type="text" ng-model="color"&gt;
-&lt;color-picker ng-model="color"&gt;
-&lt;/color-picker&gt;<!--
+-->&lt;color-picker ng-model=&quot;color&quot;&gt;
+&lt;/color-picker&gt;
+
+&lt;input type=&quot;text&quot;
+       ng-model=&quot;color&quot;
+       ng-init=&quot;color = &#039;#f05a28&#039;&quot;&gt;
+&lt;span ng-style=&quot;{ color: color }&quot;&gt;
+    &amp;block;
+&lt;/span&gt;<!--
                     --></code></pre>
                 </div>
             </div>
         </section>
         <section>
             <div class="content-wrap">
-                <img src="http://www.fillmurray.com/g/300/200" class="float-right" />
+                <h3 id="overview">Overview</h3>
 
-                <h3>Introduction</h3>
+                <p><strong>angular-color-picker</strong> is a lightweight color picker that acts
+                    like a custom input element through regular <a href="https://docs.angularjs.org/api/ng/directive/ngModel">ng-model</a> bindings. It is:</p>
 
-                <p>Some descriptive text, perhaps a <a href="#">link</a> or <a href="#">two</a>.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat.</p>
+                <ul>
+                    <li>Pure CSS &ndash; does not use any images</li>
+                    <li>Pure Angular &ndash; does not rely on any other library</li>
+                    <li>Compatible with IE8+</li>
+                    <li>Following <a href="https://github.com/umdjs/umd">UMD</a></li>
+                </ul>
             </div>
         </section>
         <section>
             <div class="content-wrap">
-                <h3>Usage</h3>
+                <h3 id="download">Download</h3>
 
-                <h4>Installation</h4>
+                <h4>Via Bower</h4>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <pre><code class="lang-sh">bower install angular-color-picker</code></pre>
 
-                <h4>Ordered List</h4>
+                <h4>Via NPM</h4>
 
-                <ol>
-                    <li>Toronto</li>
-                    <li>Vancouver. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat.</li>
-                    <li>Chernihiv</li>
-                    <li>Chicago</li>
-                </ol>
+                <pre><code class="lang-sh">npm install angular-color-picker</code></pre>
 
-                <h4>Unordered List</h4>
+                <p>Or simply grab the latest from <a href="https://github.com/myplanetdigital/angular-color-picker/releases">GitHub</a>.</p>
 
-                <ul>
-                    <li>Toronto</li>
-                    <li>Vancouver. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat.</li>
-                    <li>Chernihiv</li>
-                    <li>Chicago</li>
-                </ul>
+                <h3 id="usage">Usage</h3>
 
-                <h4>Definition List</h4>
+                <p>Include <strong>angular-color-picker.js</strong> in your application,
+                    after Angular is included. Also include <strong>angular-color-picker.css</strong>
+                    to get the bare minimum styling.</p>
 
-                <dl>
-                    <dt>Toronto</dt>
-                    <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua.</dd>
-
-                    <dt>Vancouver</dt>
-                    <dd>Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat.</dd>
-                </dl>
-
-                <h4>Code Block</h4>
-
-                <pre><code class="lang-js"><!--
--->angular
-    .module('app.module', [ 'mp.example' ])
-    .controller('main', function ($scope) {
-        $scope.message = 'Hello'; // A message to the world
-    });<!--
+                <pre><code class="lang-html"><!--
+-->&lt;link rel=&quot;stylesheet&quot; href=&quot;path/to/angular-color-picker.css&quot;&gt;
+&lt;script src=&quot;path/to/angular.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;path/to/angular-color-picker.js&quot;&gt;&lt;/script&gt;<!--
                 --></code></pre>
 
-                <h4>Blockquote</h4>
+                <p>You may use an AMD or CommonJS loader as well.</p>
 
-                <blockquote>
-                Quidquid Latine dictum sit altum videtur.
-                </blockquote>
+                <p>Initialize your Angular application with the <strong>mp.colorPicker</strong> module as a dependency:</p>
 
-                <h4>Table</h4>
+                <pre><code class="lang-js"><!--
+-->angular.module('app', [ 'mp.colorPicker' ]);<!--
+                --></code></pre>
 
-                <table>
-                    <thead>
-                        <tr>
-                            <td>THEAD TD</td>
-                            <th>TH Col 1</th>
-                            <th>TH Col 2</th>
-                            <th>TH Col 3</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th>TBODY TH Row 1</th>
-                            <td>Lorem ipsum dolor</td>
-                            <td>Consectetur adipisicing</td>
-                            <td>1</td>
-                        </tr>
-                        <tr>
-                            <th>TBODY TH Row 2</th>
-                            <td>Sit amet</td>
-                            <td>Sed do eiusmod</td>
-                            <td>2</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <p>Then use the <strong>&lt;color-picker&gt;</strong> element along with an <strong>ng-model</strong> directive for two-way binding with a scope variable:</p>
+
+                <pre><code class="lang-html"><!--
+-->&lt;color-picker ng-model=&quot;color&quot;&gt;
+&lt;/color-picker&gt;<!--
+                --></code></pre>
+
+                <p>Feel free to override the styles defined in <strong>angular-color-picker.css</strong> to match the style of your application, while being careful not to change the size of the color or hue picker boxes.</p>
+
+                <p>That's all!</p>
             </div>
         </section>
     </article>
     <footer>
         <div class="content-wrap">
             Made with <span class="love" title="love">love</span> by
-            <a href="http://ivanamcconnell.com">Ivana</a> and
             <a href="https://github.com/atesgoral">Ates</a>
             from
             <a href="http://myplanet.io/">Myplanet</a>.
