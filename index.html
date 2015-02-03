@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta encoding="UTF-8" />
+    <title>angular-color-picker</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+    <link rel="stylesheet" href="assets/fonts.css" />
+    <link rel="stylesheet" href="theme.css" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/github.min.css" />
+    <link rel="stylesheet" href="lib/angular-color-picker.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.9/angular.js"></script>
+    <script src="lib/angular-color-picker.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+
+        angular.module('demo', [ 'mp.colorPicker' ]);
+    </script>
+</head>
+<body>
+    <header>
+        <div class="content-wrap">
+            <a href="http://myplanet.io" class="logo" title="Myplanet">Myplanet</a>
+            <h1><a href="/">angular-color-picker</a></h1>
+            <h2>Subtitle</h2>
+        </div>
+    </header>
+    <nav>
+        <div class="content-wrap">
+            <ul>
+                <li><a href="#">Download <strong>ZIP</strong></a></li>
+                <li><a href="#">Download <strong>TAR</strong></a></li>
+                <li><a href="https://github.com/myplanetdigital/angular-color-picker">View on <strong>GitHub</strong></a></li>
+            </ul>
+        </div>
+    </nav>
+    <article ng-app="demo">
+        <section class="showcase">
+            <div class="content-wrap">
+                <div class="showcase-example">
+                    <input type="text" ng-model="color">
+                    <color-picker ng-model="color">
+                    </color-picker>
+                </div>
+                <div class="showcase-content">
+                    <h3>Showcase</h3>
+
+                    <p>In case we need a bolder, larger section to showcase an example or the working code, for users to interact with.</p>
+
+                    <h4>Showcase Code Block</h4>
+
+                    <pre><code class="lang-html"><!--
+-->&lt;input type="text" ng-model="color"&gt;
+&lt;color-picker ng-model="color"&gt;
+&lt;/color-picker&gt;<!--
+                    --></code></pre>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="content-wrap">
+                <img src="http://www.fillmurray.com/g/300/200" class="float-right" />
+
+                <h3>Introduction</h3>
+
+                <p>Some descriptive text, perhaps a <a href="#">link</a> or <a href="#">two</a>.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat.</p>
+            </div>
+        </section>
+        <section>
+            <div class="content-wrap">
+                <h3>Usage</h3>
+
+                <h4>Installation</h4>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                <h4>Ordered List</h4>
+
+                <ol>
+                    <li>Toronto</li>
+                    <li>Vancouver. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat.</li>
+                    <li>Chernihiv</li>
+                    <li>Chicago</li>
+                </ol>
+
+                <h4>Unordered List</h4>
+
+                <ul>
+                    <li>Toronto</li>
+                    <li>Vancouver. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat.</li>
+                    <li>Chernihiv</li>
+                    <li>Chicago</li>
+                </ul>
+
+                <h4>Definition List</h4>
+
+                <dl>
+                    <dt>Toronto</dt>
+                    <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua.</dd>
+
+                    <dt>Vancouver</dt>
+                    <dd>Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat.</dd>
+                </dl>
+
+                <h4>Code Block</h4>
+
+                <pre><code class="lang-js"><!--
+-->angular
+    .module('app.module', [ 'mp.example' ])
+    .controller('main', function ($scope) {
+        $scope.message = 'Hello'; // A message to the world
+    });<!--
+                --></code></pre>
+
+                <h4>Blockquote</h4>
+
+                <blockquote>
+                Quidquid Latine dictum sit altum videtur.
+                </blockquote>
+
+                <h4>Table</h4>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <td>THEAD TD</td>
+                            <th>TH Col 1</th>
+                            <th>TH Col 2</th>
+                            <th>TH Col 3</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>TBODY TH Row 1</th>
+                            <td>Lorem ipsum dolor</td>
+                            <td>Consectetur adipisicing</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <th>TBODY TH Row 2</th>
+                            <td>Sit amet</td>
+                            <td>Sed do eiusmod</td>
+                            <td>2</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </article>
+    <footer>
+        <div class="content-wrap">
+            Made with <span class="love" title="love">love</span> by
+            <a href="http://ivanamcconnell.com">Ivana</a> and
+            <a href="https://github.com/atesgoral">Ates</a>
+            from
+            <a href="http://myplanet.io/">Myplanet</a>.
+        </div>
+    </footer>
+</body>
+</html>
