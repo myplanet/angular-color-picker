@@ -3,12 +3,14 @@
         define([ 'module', 'angular' ], function (module, angular) {
             module.exports = factory(angular);
         });
+    } else if (typeof module === 'object') {
+        module.exports = factory(require('angular'));
     } else {
         if (!root.mp) {
             root.mp = {};
         }
 
-        root.mp.datePicker = factory(root.angular);
+        root.mp.colorPicker = factory(root.angular);
     }
 }(this, function (angular) {
     'use strict';
@@ -71,6 +73,10 @@
             + b.toString(16).slice(1);
     }
 
+    /**
+     * Heavily based on:
+     * http://stackoverflow.com/a/8023734/23501
+     */
     function hexRgbToHsv(hexRgb) {
         var tokens = /^#(..)(..)(..)$/.exec(hexRgb);
 

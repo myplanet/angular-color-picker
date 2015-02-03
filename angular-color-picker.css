@@ -65,6 +65,7 @@
     width: 30px;
     height: 200px;
 }
+/* Heavily based on: http://jsfiddle.net/bgrins/Whc6Z/ */
 .angular-color-picker > ._hues > ._ie-1 {
     height: 17%;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0000', endColorstr='#ffff00');
