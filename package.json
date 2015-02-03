@@ -1,0 +1,26 @@
+{
+  "name": "angular-color-picker",
+  "version": "1.0.0",
+  "description": "A lightweight color picker component for Angular",
+  "main": "angular-color-picker.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/myplanetdigital/angular-color-picker.git"
+  },
+  "keywords": [
+    "angular",
+    "color",
+    "hsv"
+  ],
+  "author": "Ates Goral <ates@magnetiq.com> (http://magnetiq.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/myplanetdigital/angular-color-picker/issues"
+  }
+}
