@@ -127,7 +127,7 @@
         }
     }
 
-    angular.module('mp.colorPicker', []).directive('colorPicker', [ '$window', function ($window) {
+    return angular.module('mp.colorPicker', []).directive('colorPicker', [ '$window', function ($window) {
         // Introduce custom elements for IE8
         $window.document.createElement('color-picker');
 
