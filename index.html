@@ -127,16 +127,55 @@
 -->angular.module('app', [ 'mp.colorPicker' ]);<!--
                 --></code></pre>
 
-                <p>Then use the <strong>&lt;color-picker&gt;</strong> element along with an <strong>ng-model</strong> directive for two-way binding with a scope variable:</p>
+                <p>Then use the <code>&lt;color-picker&gt;</code> element along with an <code>ng-model</code> directive for two-way binding with a scope variable:</p>
 
                 <pre><code class="lang-html"><!--
 -->&lt;color-picker ng-model=&quot;color&quot;&gt;
 &lt;/color-picker&gt;<!--
                 --></code></pre>
 
-                <p>Feel free to override the styles defined in <strong>angular-color-picker.css</strong> to match the style of your application, while being careful not to change the size of the color or hue picker boxes.</p>
+                <h4 id="theming">Theming</h4>
 
-                <p>That's all!</p>
+                <p>You can override the styles defined in <strong>angular-color-picker.css</strong> to match the style of your application, while being careful not to change the size of the color variation and hue picker boxes. The classes and specifiers that are used are:</p>
+
+                <dl>
+                    <dt>.angular-color-picker</dt>
+                    <dd>The top-level container for the entire component.</dd>
+
+                    <dt>.angular-color-picker > ._variations</dt>
+                    <dd>The color picker box that shows all the color variations for a selected hue. <strong>The size of this must remain 200x200 pixels.</strong></dd>
+
+                    <dt>.angular-color-picker > ._variations > ._whites</dt>
+                    <dt>.angular-color-picker > ._variations > ._whites > ._blacks</dt>
+                    <dd>Gradient overlays that result in all variations to be rendered. <strong>You should not have to touch these.</strong></dd>
+
+                    <dt>.angular-color-picker > ._variations > ._whites > ._blacks > ._cursor</dt>
+                    <dd>The currently selected color cursor. <strong>The effective size of this must remain 10x10 pixels.</strong></dd>
+
+                    <dt>.angular-color-picker > ._variations > ._whites > ._blacks > ._mouse-trap</dt>
+                    <dd>Internally used to capture mouse events. <strong>You should not have to touch this.</strong></dd>
+
+                    <dt>.angular-color-picker > ._hues</dt>
+                    <dd>The hue picker box. <strong>The height of this must remain 200 pixels. You should not have to change the gradients.</strong></dd>
+
+                    <dt>.angular-color-picker > ._hues > ._cursor</dt>
+                    <dd>The currently seleted hue cursor. <strong>The effective height of this must remain 10 pixels.</strong></dd>
+
+                    <dt>.angular-color-picker > ._hues > ._mouse-trap</dt>
+                    <dd>Internally used to capture mouse events. <strong>You should not have to touch this.</strong></dd>
+
+                    <dt>.angular-color-picker > ._hues > ._ie-1</dt>
+                    <dt>.angular-color-picker > ._hues > ._ie-2</dt>
+                    <dt>.angular-color-picker > ._hues > ._ie-3</dt>
+                    <dt>.angular-color-picker > ._hues > ._ie-4</dt>
+                    <dt>.angular-color-picker > ._hues > ._ie-5</dt>
+                    <dt>.angular-color-picker > ._hues > ._ie-6</dt>
+                    <dd>Fallbacks containers to get continuous hue gradients working on IE. <strong>You should not have to change the gradients.</strong></dd>
+                </dl>
+
+                <h3>Limitations</h3>
+
+                <p>As evidenced by the warnings under <a href="#theming">Theming</a>, the JavaScript code is currently hard-coded to work with certain dimensions for some key elements. The color picker will stop functioning accurately if you change the dimensions of those elements during theming.</p>
             </div>
         </section>
     </article>
