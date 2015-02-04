@@ -10,16 +10,15 @@
     <link rel="stylesheet" href="lib/angular-color-picker.css" />
     <style>
     .showcase-example {
-        padding-bottom: 28px;
-    }
-    .showcase-example .angular-color-picker {
-        margin: 8px;
-        border-color: transparent;
+        text-align: center;
+        padding: 8px;
+        box-sizing: border-box;
+        font-size: 0;
     }
     .showcase-example input {
         font-family: TradeGothic, sans-serif;
-        font-size: 1em;
-        margin-left: 28px;
+        font-size: 16px;
+        margin-top: 8px;
         color: #333;
         width: 6em;
     }
@@ -61,9 +60,6 @@
                     <input type="text"
                            ng-model="color"
                            ng-init="color = '#f05a28'">
-                    <span ng-style="{ color: color }">
-                        &block;
-                    </span>
                 </div>
                 <div class="showcase-content">
                     <h3>Live Demo</h3>
@@ -78,10 +74,7 @@
 
 &lt;input type=&quot;text&quot;
        ng-model=&quot;color&quot;
-       ng-init=&quot;color = &#039;#f05a28&#039;&quot;&gt;
-&lt;span ng-style=&quot;{ color: color }&quot;&gt;
-    &amp;block;
-&lt;/span&gt;<!--
+       ng-init=&quot;color = &#039;#f05a28&#039;&quot;&gt;<!--
                     --></code></pre>
                 </div>
             </div>
