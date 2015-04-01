@@ -1,7 +1,7 @@
 {
   "name": "angular-color-picker",
   "main": "angular-color-picker.js",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "homepage": "https://github.com/myplanetdigital/angular-color-picker",
   "authors": [
     "Ates Goral <ates.g@myplanet.com>"
