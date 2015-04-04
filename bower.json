@@ -3,12 +3,14 @@
   "main": "angular-color-picker.js",
   "version": "1.0.4",
   "homepage": "https://github.com/myplanet/angular-color-picker",
+  "description": "Lightweight color picker for Angular",
   "authors": [
     "Ates Goral <ates.g@myplanet.com>"
   ],
   "moduleType": [
     "amd",
-    "globals"
+    "globals",
+    "node"
   ],
   "keywords": [
     "angular",

@@ -1,14 +1,8 @@
 {
   "name": "angular-color-picker",
   "version": "1.0.4",
-  "description": "A lightweight color picker component for Angular",
+  "description": "Lightweight color picker for Angular",
   "main": "angular-color-picker.js",
-  "directories": {
-    "example": "examples"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git://github.com/myplanet/angular-color-picker.git"
