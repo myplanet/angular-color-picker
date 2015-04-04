@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/myplanetdigital/angular-color-picker.git"
+    "url": "git://github.com/myplanet/angular-color-picker.git"
   },
   "keywords": [
     "angular",
@@ -21,6 +21,6 @@
   "author": "Ates Goral <ates.g@myplanet.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/myplanetdigital/angular-color-picker/issues"
+    "url": "https://github.com/myplanet/angular-color-picker/issues"
   }
 }

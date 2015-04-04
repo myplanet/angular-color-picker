@@ -2,7 +2,7 @@
   "name": "angular-color-picker",
   "main": "angular-color-picker.js",
   "version": "1.0.3",
-  "homepage": "https://github.com/myplanetdigital/angular-color-picker",
+  "homepage": "https://github.com/myplanet/angular-color-picker",
   "authors": [
     "Ates Goral <ates.g@myplanet.com>"
   ],
@@ -16,10 +16,6 @@
   ],
   "license": "MIT",
   "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
+    "**/.*"
   ]
 }
