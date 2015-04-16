@@ -14,7 +14,8 @@
   ],
   "keywords": [
     "angular",
-    "color"
+    "color",
+    "hsv"
   ],
   "license": "MIT",
   "ignore": [
