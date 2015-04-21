@@ -1,7 +1,7 @@
 {
   "name": "angular-color-picker",
   "main": "angular-color-picker.js",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "homepage": "https://github.com/myplanet/angular-color-picker",
   "description": "Lightweight color picker for Angular",
   "authors": [
