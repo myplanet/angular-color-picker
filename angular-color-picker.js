@@ -127,7 +127,7 @@
         }
     }
 
-    return angular.module('mp.colorPicker', []).directive('colorPicker', [ '$window', function ($window) {
+    return angular.module('mp.colorPicker', []).directive('colorPicker', [ '$window', '$document', function ($window, $document) {
         // Introduce custom elements for IE8
         $window.document.createElement('color-picker');
 
@@ -135,9 +135,9 @@
             + '<div class="angular-color-picker">'
             + '    <div class="_variations" ng-style="{ backgroundColor: hueBackgroundColor }">'
             + '        <div class="_whites">'
-            + '            <div class="_blacks">'
+            + '            <div class="_blacks" ng-mousedown="startDrag($event, \'color\')">'
             + '                <div class="_cursor" ng-if="colorCursor" ng-style="{ left: colorCursor.x - 5 + \'px\', top: colorCursor.y - 5 + \'px\' }"></div>'
-            + '                <div class="_mouse-trap" ng-mousedown="startDrag($event, \'color\')"></div>'
+            + '                <div class="_mouse-trap"></div>'
             + '            </div>'
             + '        </div>'
             + '    </div>'
@@ -226,7 +226,14 @@
                 }
 
                 $scope.startDrag = function (evt, subject) {
-                    var rect = evt.target.getBoundingClientRect();
+                    var rect = evt.currentTarget.getBoundingClientRect(),
+                        pageX,
+                        pageY;
+
+                    pageX =  evt.pageX || evt.clientX +
+                        $document.body.scrollLeft + $document.documentElement.scrollLeft;
+                    pageY = evt.pageY || evt.clientY +
+                        $document.body.scrollTop + $document.documentElement.scrollTop;
 
                     dragSubject = subject;
                     dragRect = {
@@ -236,7 +243,7 @@
                         height: rect.bottom - rect.top
                     };
 
-                    doDrag(evt.offsetX || evt.layerX, evt.offsetY || evt.layerY);
+                    doDrag(pageX - dragRect.x, pageY - dragRect.y);
 
                     angular.element($window)
                         .on('mousemove', onMouseMove)
