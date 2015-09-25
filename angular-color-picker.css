@@ -17,7 +17,7 @@
     background: -webkit-linear-gradient(left, #fff 0, transparent 100%);
     background: -moz-linear-gradient(left, #fff 0, transparent 100%);
     background: -ms-linear-gradient(left, #fff 0, transparent 100%);
-    background: linear-gradient(left, #fff 0, transparent 100%);
+    background: linear-gradient(to right, #fff 0, transparent 100%);
     filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#00ffffff', GradientType='1')";
 }
 .angular-color-picker > ._variations > ._whites > ._blacks {
@@ -26,7 +26,7 @@
     background: -webkit-linear-gradient(top, transparent 0, #000 100%);
     background: -moz-linear-gradient(top, transparent 0, #000 100%);
     background: -ms-linear-gradient(top, transparent 0, #000 100%);
-    background: linear-gradient(top, transparent 0, #000 100%);
+    background: linear-gradient(to bottom, transparent 0, #000 100%);
     filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#ff000000')";
     position: relative;
 }
@@ -53,7 +53,7 @@
     background: -webkit-linear-gradient(top, #ff0000 0%, #ffff00 17%, #00ff00 33%, #00ffff 50%, #0000ff 67%, #ff00ff 83%, #ff0000 100%);
     background: -moz-linear-gradient(top, #ff0000 0%, #ffff00 17%, #00ff00 33%, #00ffff 50%, #0000ff 67%, #ff00ff 83%, #ff0000 100%);
     background: -ms-linear-gradient(top, #ff0000 0%, #ffff00 17%, #00ff00 33%, #00ffff 50%, #0000ff 67%, #ff00ff 83%, #ff0000 100%);
-    background: linear-gradient(top, #ff0000 0%, #ffff00 17%, #00ff00 33%, #00ffff 50%, #0000ff 67%, #ff00ff 83%, #ff0000 100%);
+    background: linear-gradient(to bottom, #ff0000 0%, #ffff00 17%, #00ff00 33%, #00ffff 50%, #0000ff 67%, #ff00ff 83%, #ff0000 100%);
 }
 .angular-color-picker > ._hues > ._cursor {
     position: absolute;
