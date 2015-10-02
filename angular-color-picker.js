@@ -15,6 +15,28 @@
 }(this, function (angular) {
     'use strict';
 
+    function rgbToHex(rgb){
+
+        var matches = /^rgba?\(([0-9]+),\s*([0-9]+),\s*([0-9]+)(?:,\s*[0-9.]+)?\)$/.exec(rgb);
+        if(!matches) return;
+
+        var hex = function(c){
+            var out = c < 0   ? "00"
+                    : c > 255 ? "ff"
+                    : (+c).toString(16);
+            return out.length == 1
+                ? "0"+out
+                : out;
+        }
+
+        var r = hex( matches[1] ),
+            g = hex( matches[2] ),
+            b = hex( matches[3] );
+
+        return "#"+ r + g + b;
+
+    }
+
     function hsvToHexRgb(h, s, v) {
         if (typeof h === 'object') {
             s = h.s;
@@ -128,8 +150,16 @@
     }
 
     return angular.module('mp.colorPicker', []).directive('colorPicker', [ '$window', function ($window) {
-        // Introduce custom elements for IE8
-        $window.document.createElement('color-picker');
+        // Introduce custom elements for IE8. Use for resolving color as well.
+        var el = $window.document.createElement('color-picker');
+        el.style.display = "none";
+        $window.document.body.appendChild(el);
+
+        var normalizeColor = function(color){ 
+            el.style.color = color;
+            console.log("normalizing", color, "to", $window.getComputedStyle(el).color, rgbToHex( $window.getComputedStyle(el).color ) );
+            return rgbToHex( $window.getComputedStyle(el).color );
+        }
 
         var tmpl = ''
             + '<div class="angular-color-picker">'
@@ -167,8 +197,10 @@
 
                 if (ngModel) {
                     ngModel.$render = function () {
-                        if (/^#[0-9A-Fa-f]{6}$/.test(ngModel.$viewValue)) {
-                            $scope.color = ngModel.$viewValue;
+                        var resolvedColor = normalizeColor(ngModel.$viewValue);
+
+                        if (resolvedColor) {
+                            $scope.color = resolvedColor;
                             $scope.hsv = hexRgbToHsv($scope.color);
                             $scope.colorCursor = {
                                 x: $scope.hsv.s * 200,
