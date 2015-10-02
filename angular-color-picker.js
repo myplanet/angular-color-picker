@@ -157,7 +157,9 @@
 
         var normalizeColor = function(color){ 
             el.style.color = color;
-            return rgbToHex( $window.getComputedStyle(el).color );
+            return $window.getComputedStyle
+                ? rgbToHex( $window.getComputedStyle(el).color )
+                : /^#[0-9A-Fa-f]{6}$/.test(color)? color : false
         }
 
         var tmpl = ''
