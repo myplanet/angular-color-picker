@@ -157,7 +157,6 @@
 
         var normalizeColor = function(color){ 
             el.style.color = color;
-            console.log("normalizing", color, "to", $window.getComputedStyle(el).color, rgbToHex( $window.getComputedStyle(el).color ) );
             return rgbToHex( $window.getComputedStyle(el).color );
         }
 
