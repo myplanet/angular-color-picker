@@ -238,10 +238,9 @@
 
                     doDrag(evt.offsetX || evt.layerX, evt.offsetY || evt.layerY);
 
-                    angular.element($window)
-                        .on('mousemove', onMouseMove)
+                    $element.on('mousemove', onMouseMove)
                         .one('mouseup', function () {
-                            angular.element($window).off('mousemove', onMouseMove);
+                            $element.off('mousemove', onMouseMove);
                         });
                 };
             }
