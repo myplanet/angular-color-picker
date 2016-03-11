@@ -240,7 +240,7 @@
 
                     angular.element($window)
                         .on('mousemove', onMouseMove)
-                        .one('mouseup', function () {
+                        .on('mouseup', function () {
                             angular.element($window).off('mousemove', onMouseMove);
                         });
                 };
