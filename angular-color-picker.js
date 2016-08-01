@@ -1,17 +1,19 @@
 (function (root, factory) {
-    if (typeof define === 'function' && define.amd) {
-        define([ 'module', 'angular' ], function (module, angular) {
-            module.exports = factory(angular);
-        });
-    } else if (typeof module === 'object') {
-        module.exports = factory(require('angular'));
+    if (typeof module !== 'undefined' && module.exports) {
+    // CommonJS
+    if (typeof angular === 'undefined') {
+      factory(require('angular'));
     } else {
-        if (!root.mp) {
-            root.mp = {};
-        }
-
-        root.mp.colorPicker = factory(root.angular);
+      factory(angular);
     }
+    module.exports = 'ngDialog';
+  } else if (typeof define === 'function' && define.amd) {
+    // AMD
+    define(['angular'], factory);
+  } else {
+    // Global Variables
+    factory(root.angular);
+  }
 }(this, function (angular) {
     'use strict';
 
