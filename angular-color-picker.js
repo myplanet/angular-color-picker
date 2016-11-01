@@ -4,7 +4,12 @@
             module.exports = factory(angular);
         });
     } else if (typeof module === 'object') {
-        module.exports = factory(require('angular'));
+        if (typeof angular === 'undefined') {
+          factory(require('angular'));
+        } else {
+          factory(angular);
+        }
+        module.exports = 'mp.colorPicker';
     } else {
         if (!root.mp) {
             root.mp = {};
