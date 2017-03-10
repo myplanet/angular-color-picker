@@ -224,6 +224,18 @@
                         doDrag(evt.clientX - dragRect.x, evt.clientY - dragRect.y);
                     });
                 }
+                function onTouchMove(evt) {
+                    evt.preventDefault();
+
+                    $scope.$apply(function() {
+                        doDrag(evt.targetTouches[0].clientX - dragRect.x, evt.targetTouches[0].clientY - dragRect.y);
+                    });
+                }
+                function onMouseUp() {
+                    angular.element($window)
+                        .off('mousemove', onMouseMove)
+                        .off('touchmove', onTouchMove);
+                }
 
                 $scope.startDrag = function (evt, subject) {
                     var rect = evt.target.getBoundingClientRect();
@@ -240,9 +252,9 @@
 
                     angular.element($window)
                         .on('mousemove', onMouseMove)
-                        .one('mouseup', function () {
-                            angular.element($window).off('mousemove', onMouseMove);
-                        });
+                        .on('touchmove', onTouchMove)
+                        .one('mouseup', onMouseUp)
+                        .one('touchend', onMouseUp);
                 };
             }
         };
